@@ -10,10 +10,10 @@ class FragmentDetails : Fragment(R.layout.fragmenl_details) {
         listOf(R.id.textView1, R.id.textView2, R.id.textView3, R.id.textView4, R.id.textView5, R.id.textView6,)
 
     fun buttonPressed(type: ButtonType) = when (type) {
-        FIRST -> setText("first btn")
-        SECOND -> setText("2 btn")
-        THIRD -> setText("3 btn")
-        FOURTH -> setText("4 btn")
+        FIRST -> setText("first button was pressed")
+        SECOND -> setText("second button was pressed")
+        THIRD -> setText("third button was pressed")
+        FOURTH -> setText("the fourth button was pressed")
     }
 
     private fun setText(text: String) {
