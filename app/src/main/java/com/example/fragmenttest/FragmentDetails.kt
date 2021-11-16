@@ -13,7 +13,7 @@ class FragmentDetails : Fragment(R.layout.fragmenl_details) {
         FIRST -> setText("first button was pressed")
         SECOND -> setText("second button was pressed")
         THIRD -> setText("third button was pressed")
-        FOURTH -> setText("the fourth button was pressed")
+        FOURTH -> setText("fourth button was pressed")
     }
 
     private fun setText(text: String) {
