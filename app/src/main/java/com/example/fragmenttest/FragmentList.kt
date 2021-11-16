@@ -14,7 +14,7 @@ class FragmentList : Fragment(R.layout.fragment_list) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.button1).setOnClickListener {
+        view.findViewById<Button>(R.id.button2)?.setOnClickListener {
             (requireActivity() as? FragmentListClickListener)?.onItemClick()
         }
     }
