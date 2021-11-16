@@ -2,12 +2,24 @@ package com.example.fragmenttest
 
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.fragmenttest.ButtonType.*
 
 class FragmentDetails : Fragment(R.layout.fragmenl_details) {
-    fun buttonPressed() {
-        view?.findViewById<TextView>(R.id.textView1)?.text = "Button 1 was pressed"
+
+    private val listItem: List<Int> =
+        listOf(R.id.textView1, R.id.textView2, R.id.textView3, R.id.textView4, R.id.textView5, R.id.textView6,)
+
+    fun buttonPressed(type: ButtonType) = when (type) {
+        FIRST -> setText("first btn")
+        SECOND -> setText("2 btn")
+        THIRD -> setText("3 btn")
+        FOURTH -> setText("4 btn")
     }
 
-
+    private fun setText(text: String) {
+        listItem.forEach {
+            view?.findViewById<TextView>(it)?.text = text
+        }
+    }
 
 }

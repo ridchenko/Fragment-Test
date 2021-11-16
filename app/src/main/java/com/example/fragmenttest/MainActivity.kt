@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity(), FragmentListClickListener {
         setContentView(R.layout.activity_main)
     }
 
-    override fun onItemClick() {
+    override fun onItemClick(type: ButtonType) {
         (supportFragmentManager.findFragmentByTag(
             "tag_details"
-        ) as? FragmentDetails)?.buttonPressed()
+        ) as? FragmentDetails)?.buttonPressed(type)
     }
 }
